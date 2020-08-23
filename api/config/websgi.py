@@ -1,11 +1,11 @@
- 
 # -*- coding: utf-8 -*-
 
 import multiprocessing
 import os
 from distutils.util import strtobool
 from dotenv import load_dotenv
-load_dotenv(dotenv_path=None,verbose=False, override=True)
+
+load_dotenv(dotenv_path=None, verbose=False, override=True)
 
 bind = os.getenv("WEB_BIND", f'0.0.0.0:{os.getenv("PORT","8000")}')
 
