@@ -14,7 +14,7 @@ auth_middleware = FalconAuthMiddleware(
     auth_backend, exempt_routes=["/auth"], exempt_methods=["HEAD", "OPTIONS"]
 )
 
-api = falcon.API(middleware=[Marshmallow(),])  # middleware=[auth_middleware]
+api = falcon.API(middleware=[Marshmallow(),])  # middleware=[auth_middleware] - add to enable jwt authentication
 
 for endpoint, _object in routes:
     api.add_route(endpoint, _object)
